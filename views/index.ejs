@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to our website</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Employee List</h1>
+      <table class="table table-bordered table-hover">
+        <tr class="text-bg-dark">
+          <th>Name</th>
+          <th>Department</th>
+          <th>Salary</th>
+          <th>Designation</th>
+          <th>Employe_Type</th>
+        </tr>
+        <% employees.forEach((employee) => { %>
+        <tr>
+          <td><%= employee.name %></td>
+          <td><%= employee.department %></td>
+          <td><%= employee.salary %></td>
+          <td><%= employee.designation %></td>
+          <td><%= employee.employee_type %></td>
+        </tr>
+        <% }) %>
+      </table>
+    </div>
+  </body>
+</html>
